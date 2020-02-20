@@ -29,6 +29,8 @@ app.post('/', (req, res) => {
     pool.query('INSERT INTO MESSAGE (message) VALUES ($1)', [req.body.message], (error, results) => {
       if (error)
           throw error;
+      
+      res.sendStatus(200);  
     });
 });
 
