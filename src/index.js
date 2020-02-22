@@ -17,7 +17,7 @@ const pool = new pg({
 });
 
 app.get('/', (req, res) => {
-    pool.query('SELECT MESSAGE, CREATED_AT FROM MESSAGE', (error, results) => {
+    pool.query('SELECT MESSAGE, CREATED_AT FROM MESSAGE ORDER BY CREATED_AT DESC', (error, results) => {
       if (error)
           throw error;
 
