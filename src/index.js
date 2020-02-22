@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
           throw error;
 
       res.json(results.rows);
-    })
+    });
 });
 
 app.post('/', (req, res) => {
